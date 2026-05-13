@@ -11,11 +11,11 @@ cd /d "%~dp0"
 
 :: 启动后端
 echo [1/3] 启动后端 (FastAPI)...
-start "SQL-Backend" cmd /k "cd /d %~dp0backend && echo 后端运行中 - http://localhost:8000 && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+start "SQL-Backend" /d "%~dp0backend" cmd /k "echo 后端运行中 - http://localhost:8000 && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
 
 :: 启动前端
 echo [2/3] 启动前端 (Vite)...
-start "SQL-Frontend" cmd /k "cd /d %~dp0frontend && echo 前端运行中 - http://localhost:5173 && npx vite --host 0.0.0.0 --port 5173"
+start "SQL-Frontend" /d "%~dp0frontend" cmd /k "echo 前端运行中 - http://localhost:5173 && npx vite --host 0.0.0.0 --port 5173"
 
 :: 等待服务启动后打开浏览器
 echo [3/3] 等待服务就绪后打开浏览器...
