@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Node
+node_modules/
+
+# Database (local SQLite, don't commit)
+*.db
+
+# Build output
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.local
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
